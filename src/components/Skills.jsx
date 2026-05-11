@@ -24,7 +24,10 @@ const cms = [{name:'WordPress'}, {name:'Elementor'}]
             <CommonSubhead main={"Skills"}/>
             <div className='w-9 h-0.5 rounded-full bg-linear-to-l from-primary via-accent to-secondary'></div>
           </div>
-          <CommonHead sub={'Tools of '} main={"My Craft"} />
+          <div className="text-center">
+            <CommonHead sub={'Tools of '} main={"My Craft"} />
+          </div>
+          
 
         </div>
         
@@ -32,7 +35,7 @@ const cms = [{name:'WordPress'}, {name:'Elementor'}]
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-10">
 
           {/* ------------frontend------------ */}
-          <div className="p-10 bg-white/5 border border-white/10 hover:border-primary/30 rounded-2xl hover:bg-white/10 transition-all duration-500 hover:scale-105 hover:shadow-[0px_0px_40px] shadow-primary/30">
+          <div className="p-10 bg-white/5 border border-white/10 hover:border-primary/30 rounded-2xl hover:bg-white/10 transition-all duration-500 hover:scale-103 hover:shadow-[0px_0px_40px] shadow-primary/30">
 
             <div className="flex items-center gap-3 mb-5">
               <div className="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center">
@@ -48,7 +51,7 @@ const cms = [{name:'WordPress'}, {name:'Elementor'}]
             </div>
           </div>
           {/* ------------Tools------------ */}
-          <div className="p-10 bg-white/5 border border-white/10 hover:border-primary/30 rounded-2xl hover:bg-white/10 transition-all duration-500 hover:scale-105 hover:shadow-[0px_0px_40px] shadow-primary/30">
+          <div className="p-10 bg-white/5 border border-white/10 hover:border-primary/30 rounded-2xl hover:bg-white/10 transition-all duration-500 hover:scale-103 hover:shadow-[0px_0px_40px] shadow-primary/30">
 
             <div className="flex items-center gap-3 mb-5">
               <div className="w-10 h-10 rounded-lg bg-secondary/20 flex items-center justify-center">
@@ -64,8 +67,8 @@ const cms = [{name:'WordPress'}, {name:'Elementor'}]
             </div>
           </div>
 
-          {/* ------------frontend------------ */}
-          <div className="p-10 bg-white/5 border border-white/10 hover:border-primary/30 rounded-2xl hover:bg-white/10 transition-all duration-500 hover:scale-105 hover:shadow-[0px_0px_40px] shadow-primary/30">
+          {/* ------------CMS------------ */}
+          <div className="p-10 bg-white/5 border border-white/10 hover:border-primary/30 rounded-2xl hover:bg-white/10 transition-all duration-500 hover:scale-103 hover:shadow-[0px_0px_40px] shadow-primary/30">
 
             <div className="flex items-center gap-3 mb-5">
               <div className="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center">

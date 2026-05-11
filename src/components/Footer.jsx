@@ -18,7 +18,7 @@ const Footer = () => {
               <a href="#home" className="font-Poppons text-2xl font-bold text-transparent bg-linear-to-r from-primary via-accent to-secondary bg-clip-text">
                 S.Samiya
               </a>
-              <p className="font-Inter text-gray-400 text-sm mt-2 max-w-xs">
+              <p className="font-Inter text-gray-400 text-xs md:text-sm mt-2 max-w-xs">
                 Designing and developing premium digital experiences for the modern web.
               </p>
             </div>
@@ -30,7 +30,7 @@ const Footer = () => {
                 )) }
                 
               </div>
-              <p className="text-gray-500 text-xs uppercase tracking-widest">
+              <p className="text-gray-500 text-[10px] md:text-xs uppercase tracking-widest">
                 &copy; {currentYear} Sadiya Islam Samiya. All rights reserved.
               </p>
             </div>
