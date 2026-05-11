@@ -3,10 +3,13 @@ import CommonSubhead from '../common/CommonSubhead'
 import CommonHead from '../common/CommonHead'
 import { IoBookOutline } from 'react-icons/io5'
 import CommonPara from '../common/CommonPara'
-import { LuWrench } from 'react-icons/lu'
+import { FiAward } from 'react-icons/fi'
 
 const EduTrain = () => {
 
+  const train =[{name: "HTML/CSS"}, {name:'JavaScript'}, {name:'React'}, {name:'Tailwind'},{name:'Bootstrap'} ]
+
+  const tools = [{name:'Git'}, {name:'GitHub'}, {name:'Figma'}]
   return (
     <>
       <section className='container px-2 md:px-0 pt-20 md:pt-24'>
@@ -79,13 +82,28 @@ const EduTrain = () => {
               <CommonHead sub={'Certifications & '} main={"Training"} />
             </div>
 
-            <div className="p-6 md:p-7 bg-white/5 border border-white/10 hover:border-primary/30 rounded-2xl hover:bg-white/10 transition-all duration-500 hover:scale-101 hover:shadow-[0px_0px_40px] shadow-primary/30 mt-10">
-              <div className=''>
-                <div className="w-10 h-10 rounded-lg bg-secondary/20 flex items-center justify-center">
-                  <LuWrench className="text-secondary text-xl" />
+            <div className="p-6 md:p-7 bg-white/5 border border-white/10 hover:border-primary/30 rounded-2xl hover:bg-white/10 transition-all duration-500 hover:scale-101 hover:shadow-[0px_0px_40px] shadow-primary/30 mt-10 group">
+              <div className=' flex items-center gap-4 mb-4'>
+                <div className="w-12 h-12 rounded-lg bg-secondary/20 flex items-center justify-center">
+                  <FiAward className="text-secondary text-2xl" />
                 </div>
+                <div className="">
+                    <h4 className="text-xl text-white md:text-2xl font-Poppons font-bold group-hover:text-primary/80 transition-colors">Industrial Attachment in Web Design</h4>
+                    <p className="text-gray-400 text-[16px] md:text-lg font-Inter">Creative IT Institute</p>
+                </div>
+                
               </div>
-              <CommonPara main={'jjd'}/>
+              <CommonPara main={'Intensive hands-on experience with real-world projects, focusing on modern frontend tools, collaborative workflows, and industry-standard design principles.'}/>
+
+              <div className=" flex flex-wrap gap-4 font-Inter text-xs md:text-sm mt-4">
+                { train.map((learn)=>(
+                  <span key={learn.name} className='py-1 px-3 text-accent bg-primary/20 rounded-lg '>{learn.name}</span>
+                ))}
+                { tools.map((learn)=>(
+                  <span key={learn.name} className='py-1 px-3 text-secondary bg-secondary/20 rounded-lg '>{learn.name}</span>
+                ))}
+                
+              </div>
             </div>
           </div>
           

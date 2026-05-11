@@ -53,7 +53,7 @@ const Navber = () => {
                     
                 </button>
                 { Menu && (
-                    <div className=" absolute pb-4 top-20 -left-1 w-full text-center bg-white/5 backdrop-blur-xl z-30">
+                    <div className=" absolute pb-4 top-15 -left-1 w-full text-center bg-white/5 backdrop-blur-xl z-30">
                         <ul className=''>
                             { navlink.map((link)=> (
                                 <li key={link.name} className='pt-4'>
