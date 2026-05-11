@@ -1,12 +1,51 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import CommonSubhead from '../common/CommonSubhead'
 import CommonHead from '../common/CommonHead'
 import { FiGithub, FiMail } from 'react-icons/fi'
 import CommonPara from '../common/CommonPara'
 import { LuSend } from 'react-icons/lu'
 import { SlSocialLinkedin } from 'react-icons/sl'
+import Emailjs from '@emailjs/browser'
+import Swal from 'sweetalert2'
 
 const Contact = () => {
+//  emailjs
+
+  const form = useRef();
+
+  const sendEmail = (e)=> {
+    e.preventDefault();
+
+    Emailjs.sendForm('service_wxfs8yk', 'template_0vds70m', form.current, 'NE5pb-xc1QxMdBi4-')
+      .then(
+      () => {
+        Swal.fire({
+          icon: "success",
+          title: "Thanks for reaching out! I'll get back to you soon.",
+          width: 400,
+          padding: "4px",
+          color: "#2a9b0d",
+          showConfirmButton: false,
+          timer: 3000
+        });
+        e.target.reset();
+      },
+      (error) => {
+        console.log('Failed to send message', error);
+        Swal.fire({
+          icon: "error",
+          title: "Failed to send message",
+          width: 300,
+          padding: "4px",
+          color: "#920f0f",
+          showConfirmButton: false,
+          timer: 3000
+        });
+      },
+    );
+  }
+
+
   return (
     <>
       <section id='contact' className='container px-2 md:px-0 pt-20 md:pt-24'>
@@ -61,34 +100,38 @@ const Contact = () => {
 
           {/* ------------right side------------ */}
           <div className=" p-4 md:p-6 bg-white/5 border border-white/10 rounded-2xl">
-            <form className=" space-y-2">
+          {/* form start */}
+            <form className="flex flex-col gap-5" ref={form} onSubmit={sendEmail}>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className=" ">
                   <label className=" text-xs font-bold uppercase tracking-widest text-gray-400 ml-1 ">Full Name</label>
                   <input 
                     type="text" 
+                    name='from_name'
                     required
                     placeholder="Your Name" 
-                    className="w-full mt-2 bg-white/5 border border-white/10 rounded-xl px-5 py-4 focus:outline-none focus:border-primary transition-colors text-white"
+                    className="w-full mt-1 bg-white/5 border border-white/10 rounded-xl px-5 py-4 focus:outline-none focus:border-primary transition-colors text-white"
                   />
                 </div>
                 <div className="">
                   <label className="text-xs font-bold uppercase tracking-widest text-gray-400 ml-1">Email Address</label>
                   <input 
                     type="email" 
+                    name='from_email'
                     required
                     placeholder="Your Email" 
-                    className="w-full mt-2 bg-white/5 border border-white/10 rounded-xl px-5 py-4 focus:outline-none focus:border-primary transition-colors text-white"
+                    className="w-full mt-1 bg-white/5 border border-white/10 rounded-xl px-5 py-4 focus:outline-none focus:border-primary transition-colors text-white"
                   />
                 </div>
               </div>
               <div className="">
                 <label className="text-xs font-bold uppercase tracking-widest text-gray-400 ml-1">Subject</label>
                 <input 
-                  type="text" 
+                  type="text"
+                  name='subject' 
                   required
                   placeholder="How can I help you?" 
-                  className="w-full mt-2 bg-white/5 border border-white/10 rounded-xl px-5 py-4 focus:outline-none focus:border-primary transition-colors text-white"
+                  className="w-full mt-1 bg-white/5 border border-white/10 rounded-xl px-5 py-4 focus:outline-none focus:border-primary transition-colors text-white"
                 />
               </div>
               <div className="">
@@ -99,10 +142,10 @@ const Contact = () => {
                   name="message"
                   id="message" 
                   placeholder="Tell me about your project..." 
-                  className="w-full mt-2 bg-white/5 border border-white/10 rounded-xl px-5 py-4 focus:outline-none focus:border-primary transition duration-300 text-white "
+                  className="w-full mt-1 bg-white/5 border border-white/10 rounded-xl px-5 py-4 focus:outline-none focus:border-primary transition duration-300 text-white "
                 ></textarea>
               </div>
-              <button className="w-full py-4 bg-accent hover:bg-primary/80 hover:text-white rounded-xl font-bold duration-300 active:scale-1.1 flex items-center justify-center gap-2">
+              <button className="w-full py-4 bg-accent hover:bg-primary/80 hover:text-white rounded-xl font-bold duration-300 active:scale-1.1 flex items-center justify-center gap-2" type='submit'>
                 Send Message <LuSend className='text-xl rotate-10'/>
               </button>
             </form>
