@@ -72,12 +72,11 @@ const Projects = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
           {projects.map((project)=>(
-            <a
+            <div
             key={project.index}
-            href={project.link}
-            target='_blank'
+            onClick={() => window.open(project.link)}
             className="group block ">
-              <div className="rounded-2xl border border-white/10 hover:scale-101 transition-transform duration-300 overflow-hidden bg-white/10 md:h-[540px]">
+              <div className="rounded-2xl border border-white/10 hover:scale-101 transition-transform duration-300 overflow-hidden bg-white/10 md:h-135">
 
                 <div className="overflow-hidden relative mb-1 bg-accent/10">
 
@@ -115,7 +114,7 @@ const Projects = () => {
                   <div className="font-Inter h-1 w-0 bg-primary group-hover:w-full transition-all duration-500"></div>
                 </div>
               </div>
-            </a>
+            </div>
           ))}
         </div>
       </section>

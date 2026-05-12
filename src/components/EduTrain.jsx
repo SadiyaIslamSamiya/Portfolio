@@ -82,10 +82,10 @@ const EduTrain = () => {
               <CommonHead sub={'Certifications & '} main={"Training"} />
             </div>
 
-            <div className="p-6 md:p-7 bg-white/5 border border-white/10 hover:border-primary/30 rounded-2xl hover:bg-white/10 transition-all duration-500 hover:scale-101 hover:shadow-[0px_0px_40px] shadow-primary/30 mt-10 group">
-              <div className=' flex items-center gap-4 mb-4'>
-                <div className="w-12 h-12 rounded-lg bg-secondary/20 flex items-center justify-center">
-                  <FiAward className="text-secondary text-2xl" />
+            <div className="p-4 md:p-7 bg-white/5 border border-white/10 hover:border-primary/30 rounded-2xl hover:bg-white/10 transition-all duration-500 hover:scale-101 hover:shadow-[0px_0px_40px] shadow-primary/30 mt-10 group">
+              <div className=' flex items-center gap-2 md:gap-4 mb-4'>
+                <div className=" w-12 h-12 rounded-lg bg-secondary/20 flex items-center justify-center">
+                  <FiAward className="text-secondary text-xl md:text-2xl" />
                 </div>
                 <div className="">
                     <h4 className="text-xl text-white md:text-2xl font-Poppons font-bold group-hover:text-primary/80 transition-colors">Industrial Attachment in Web Design</h4>
